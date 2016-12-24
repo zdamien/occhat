@@ -1,0 +1,25 @@
+1-1 chat system created as a coding test.  Program can start as a server or
+as a client connecting to the server; the server was only required to
+handle a single connection.  Sending message receipts was part of the
+spec.
+
+This is the first version, around a select loop.  I got FP-happy and
+make closures to handle buffered reading through multiple loops, rather
+than just threading a record through.  Program can block on writing; I
+made a threaded version rather than try to fix that.
+
+
+The network functionality is treated as a library; the UI side is pretty
+minimal.
+
+chatMain.ml
+chatMod.ml  -- the chat module
+chatMod.mli -- ^
+Makefile
+README
+testChatMod.ml -- just calls a test function, which just tests the
+  message header code
+
+
+Ideally I'd make another pass to make the code more perfect, but I want
+to move on.

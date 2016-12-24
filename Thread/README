@@ -1,0 +1,24 @@
+1-1 chat system created as a coding test.  Program can start as a server or
+as a client connecting to the server; the server was only required to
+handle a single connection.  Sending message receipts was part of the
+spec.
+
+This is the second version, using threads to avoid blocking behavior.
+ocaml's thread library doesn't implement kill/cancel, which I had to
+work around.
+
+The network functionality is treated as a library; the UI side is pretty
+minimal.
+
+chatMain.ml
+chatMod.ml  -- the chat module
+chatMod.mli -- ^
+closureSQueue.ml -- unused; closure version of the synchronized queue.
+Makefile
+README
+SQueue.ml -- basically Queue with mutexed access.
+SQueue.mli
+testChatMod.ml -- just calls a test function, which just tests the
+  message header code
+testSQ.ml -- couple different SQueue tests.
+tSQ.ml
