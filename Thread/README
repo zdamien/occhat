@@ -10,6 +10,12 @@ work around.
 The network functionality is treated as a library; the UI side is pretty
 minimal.
 
+Building: 'make occhat'
+Usage:
+occhat server <portnum>
+occhat client <hostname> <portnum>
+
+Files:
 chatMain.ml
 chatMod.ml  -- the chat module
 chatMod.mli -- ^

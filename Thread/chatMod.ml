@@ -97,6 +97,7 @@ let parse_header buf =
     | x -> raise x
 
 let test() =
+(* tests some of the basic helper functions *)
   let x = id_to_string 42 in
   assert (x="000042");
   let x = parse_header (Bytes.of_string "100000100000010") in

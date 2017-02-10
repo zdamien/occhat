@@ -15,5 +15,3 @@ print_int (SQueue.take q);;
 print_newline();;
 print_int (SQueue.take q);;
 print_newline();;
-print_int (SQueue.take q);;
-print_newline();;
